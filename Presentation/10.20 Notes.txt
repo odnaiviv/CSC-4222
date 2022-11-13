@@ -1,0 +1,55 @@
+
+10/20 - CSC 4222 Presentation Outline
+
+Article Link:
+https://www.scmagazine.com/news/cloud-security/researcher-finds-vulnerability-in-microsoft-teams-that-could-have-led-to-xss-attacks
+https://medium.com/@numanturle/microsoft-teams-stored-xss-bypass-csp-8b4a7f5fccbf
+
+
+Topic: Cross Site Scripting
+
+
+Notes: 
+(definition)
+- XSS: a type of security vulnerability found in web applications
+-> a type of injection where malicious scripts are injected into trusted websites
+-> attacker uses web application to inject malicious data/code in form of browser side scripts to a different end user
+- XSS attacks occur when data is entered in a web application through an untrusted source, noteably through web requests
+-> data has content that is sent to web users without being validated for malicious content
+-> mostly in forms of JavaScript
+-> most common attacks include transmitting private data (through cookies or sessions) to attacker
+--> vitcim is redirected to web content controlled by attacker
+
+
+(blog)
+- found a vulnerability CVE-2021-24114 that ended in an account take over (ato)
+- used the stickers feature to figure out how it works and to find the vulnerability
+- inspected an HTTP request of sent sticker and sent simple HTML characters to different attributes
+-> he does this to not trigger any javascript code directly
+
+- used a CSP evaluator, showing "script-src" field to be "unsafe"
+-> Content Security Policy (CSP)
+- he found angular javascript in list
+-> the version was outdated, so he was able to pass the CSP through the outdated version's vulnerability
+-> alerts were being received
+- he used <ifram srcdoc> to fit two created elements of JS and div on a single page and HTML encoding to make the characters be interpreted correctly
+
+XSS vulnerability on MS Teams was found through user interaction
+
+(article)
+- researcher Numa Turle found a CVE (Common Vulnerabilities and Exposures)
+- found bug CVE-2021-24114 last year in Teams iOS (Microsoft Teams App in iOS)
+-> was in the "sticker" feature
+-> could make an account vulnerable to takeovers
+- researcher found potential attacks against multiple domains
+-> told Microsoft Teams about this, and vulnerability was patched
+- Microsoft Teams is a collaboration application
+-> it was able to load third-party apps, integrate with other apps through APIS, and store data in ways where there are potential data loss incidents
+-> an entire web browser that bad actors can attack using xss
+
+
+
+- overview of topic
+-> define what it is
+- general review of article
+- touch on topic more with blog
