@@ -1,7 +1,9 @@
 ## Homework 2 Instructions & Code
 
 ### Grade: 98 :)
->2. increase search space
+
+2) increase search space
+
 
 *Instructions: [HW2 Instructions](https://github.com/odnaiviv/CSC-4222/blob/main/HW2/HW2.pdf)*
 

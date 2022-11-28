@@ -1,9 +1,11 @@
 ## Homework 3 Instructions & File
 
 ### Grade: 96 :)
->2. -2 wrong answer
->
->4. -2 wrong answer
+
+2) -2 wrong answer
+
+4) -2 wrong answer
+
 
 *Instructions: [HW3 Instructions](https://github.com/odnaiviv/CSC-4222/blob/main/HW3/HW3.pdf)*
 
